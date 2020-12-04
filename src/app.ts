@@ -11,8 +11,14 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req: Request, res: Response<string>) => {
 	res.send('hello expressjs typescript starter');
-})
+});
 
+app.get('/name/:name', (req: Request, res: Response<string>) => {
+	const { name } = req.params;
+	res.json(`hello ${name}`);
+});
+
+// 404
 app.use((req, res, next) => {
 	res.status(404).send('Not found!')
 });
