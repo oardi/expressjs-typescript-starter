@@ -7,7 +7,7 @@ import posts from './data/posts.json';
 
 
 const app: Application = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(helmet());
 app.use(express.json());
@@ -34,7 +34,7 @@ app.post('/posts', (req: Request, res: Response) => {
 
 app.delete('/posts/:id', (req: Request, res: Response) => {
 	const id = +req.params.id;
-	res.status(200).send(id);
+	res.status(200).send(id.toString());
 });
 
 // 404
