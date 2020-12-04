@@ -2,10 +2,13 @@
 	"compilerOptions": {
 		"target": "es6",
 		"module": "commonjs",
-		"outDir": "./dist",
-		"rootDir": "./src",
+		"lib": [
+			"es6"
+		],
+		"allowJs": true,
+		"outDir": "dist",
+		"rootDir": "src",
 		"strict": true,
-		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"experimentalDecorators": true,
