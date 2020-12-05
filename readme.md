@@ -1,12 +1,13 @@
 # Expressjs Typescript Starter 
-Expressjs Typescript Starter 
 
 ## Included
 * expressjs 4
 * typescript
 * nodemon
-* middleware logger
+* logger
 * urlencoded enabled
+* helmet
+* CRUD with mocked data
 
 ## Install dependencies
 `npm install`
