@@ -13,9 +13,9 @@
 `npm install`
 
 ## Usage
-`npm run dev`
+`npm start`
 
 ## Build and Run
 `npm run build`
 
-`npm start`
+`start:prod`
