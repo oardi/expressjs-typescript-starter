@@ -1,13 +1,14 @@
-import express, { Application, Request, Response, NextFunction } from 'express';
+import type { Application, Request, Response } from 'express';
+import express from 'express';
+import helmet from 'helmet';
 import { logger } from './middleware/logger';
-import helmet from "helmet";
 
 // Mock Data
-import posts from './data/posts.json';
-
+import type { IPost } from './data/posts';
+import { posts } from './data/posts';
 
 const app: Application = express();
-const PORT = process.env.PORT || 8080;
+const PORT: string | number = process.env.PORT || 8080;
 
 app.use(helmet());
 app.use(express.json());
@@ -23,8 +24,8 @@ app.get('/posts', (req: Request, res: Response) => {
 });
 
 app.get('/posts/:id', (req: Request, res: Response) => {
-	const id = +req.params.id;
-	const post = posts.find(p => p.id === id);
+	const id: number = +req.params.id;
+	const post: IPost | undefined = posts.find(p => p.id === id);
 	res.json(post);
 });
 
@@ -33,19 +34,23 @@ app.post('/posts', (req: Request, res: Response) => {
 });
 
 app.delete('/posts/:id', (req: Request, res: Response) => {
-	const id = +req.params.id;
+	const id: number = +req.params.id;
 	res.status(200).send(id.toString());
 });
 
 // 404
-app.use((req, res, next) => {
-	res.status(404).send('Not found!')
+app.use((req, res) => {
+	res.status(404).send('Not found!');
 });
 
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response) => {
+	// eslint-disable-next-line no-console
 	console.error(err);
 	res.status(500).send('Something broke!');
 });
 
 // start server
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.listen(PORT, () => {
+	// eslint-disable-next-line no-console
+	console.log(`Listening on port ${PORT}`);
+});
