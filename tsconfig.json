@@ -14,5 +14,5 @@
 		"emitDecoratorMetadata": true,
 		"resolveJsonModule": true
 	},
-	"include": ["src", ".eslintrc.js", "@types"]
+	"include": ["src", "@types"]
 }
