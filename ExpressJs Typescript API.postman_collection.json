@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "98c3f6d9-84c3-4254-8e37-5772c9f67b84",
+		"name": "ExpressJs Typescript API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29713200",
+		"_collection_link": "https://interstellar-flare-725553.postman.co/workspace/ExpressJs-Typescript-Starter~07685c45-d686-45bb-9ac7-2128ea9e7b8f/collection/29713200-98c3f6d9-84c3-4254-8e37-5772c9f67b84?action=share&source=collection_link&creator=29713200"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/posts",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/posts/b4ab88a3d975b",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"posts",
+						"b4ab88a3d975b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add single post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"label\": \"some test label\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/posts",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update single post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"label\": \"some test label 22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/posts/b4ab88a3d975b",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"posts",
+						"b4ab88a3d975b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete single post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/posts/b4ab88a3d975b",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"posts",
+						"b4ab88a3d975b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

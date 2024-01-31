@@ -1,15 +1,12 @@
+import type { IPost } from '../interfaces/post.interface';
+
 export const posts: IPost[] = [
 	{
-		id: 1,
-		title: '1st Post',
+		id: 'b4ab88a3d975b',
+		label: '1st Post',
 	},
 	{
-		id: 2,
-		title: '2nd Post',
+		id: 'f050f954f74e4',
+		label: '2nd Post',
 	},
 ];
-
-export interface IPost {
-	id: number;
-	title: string;
-}
