@@ -38,10 +38,11 @@ app.get('/posts/:id', (req: Request, res: Response) => {
 
 // creat a single post by Label inside Request Body
 app.post('/posts', (req: Request, res: Response) => {
-	const { label } = req.body;
+	const { label, description } = req.body;
 	const newPost: IPost = {
 		id: Math.random().toString(16).slice(2),
 		label: label,
+		description: description,
 	};
 	posts.push(newPost);
 	res.json(newPost);
@@ -50,10 +51,11 @@ app.post('/posts', (req: Request, res: Response) => {
 // update a single post by URL Param ID and Label inside Request Body
 app.put('/posts/:id', (req: Request, res: Response) => {
 	const id: string = req.params.id;
-	const { label } = req.body;
+	const { label, description } = req.body;
 	const postToUpdate: IPost | undefined = posts.find(p => p.id === id);
 	if (postToUpdate) {
 		postToUpdate.label = label;
+		postToUpdate.description = description;
 		res.send(postToUpdate);
 	} else {
 		res.status(404).send(`Post with id ${id} not found`);
