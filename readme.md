@@ -14,17 +14,19 @@ No Database is used as it would make this simple starter project more complicate
 -   PUT "/posts/:id" - updating an existing post by ID and Post Data
 -   DELETE "/posts/:id" - deleting a single post by ID
 
-## Install dependencies
-
-run the following command in a terminal
-
-`npm i`
-
 ## Start the Dev Server
 
 run the following command in a terminal
 
 `npm start`
+
+this will make run the Dev Server listening on Port 8080
+
+## Test Dev Server
+
+Use Postman or any other Client to test if your Dev Server is running by calling an Endpoint like
+
+`http://localhost:8080`
 
 ## Postman
 
