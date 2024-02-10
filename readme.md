@@ -1,10 +1,12 @@
 # Expressjs Typescript Starter
 
-This is a simple ExpressJs Backend using Typescript and Nodemon to serve some basic CRUD Functions.
+This is a very simple ExpressJs Backend using Typescript and Nodemon to serve some basic CRUD Functions.
 
-It uses mocking data placed in the folder "src/data/posts.ts".
+It uses temporary data placed in the file "src/data/posts.ts".
 
 All operations are done on the temporary data.
+
+Once you restart the backend, all operations are gone.
 
 No Database is used as it would make this simple starter project more complicated.
 
