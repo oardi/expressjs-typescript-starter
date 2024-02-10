@@ -1,8 +1,11 @@
 # Expressjs Typescript Starter
 
 This is a simple ExpressJs Backend using Typescript and Nodemon to serve some basic CRUD Functions.
+
 It uses mocking data placed in the folder "src/data/posts.ts".
+
 All operations are done on the temporary data.
+
 No Database is used as it would make this simple starter project more complicated.
 
 ## API Endpoints
@@ -27,6 +30,8 @@ this will make run the Dev Server listening on Port 8080
 Use Postman or any other Client to test if your Dev Server is running by calling an Endpoint like
 
 `http://localhost:8080`
+
+this will call the first GET Call listet above - which will return 'hello expressjs typescript starter'
 
 ## Postman
 
